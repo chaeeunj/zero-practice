@@ -1,0 +1,32 @@
+.container {
+  width: 400px;
+  height: 600px;
+  border: 1px solid black;
+  font-size: 0px;
+}
+
+.top {
+  background-color: red;
+  width: 400px;
+  height: 200px;
+}
+
+.left {
+  background-color: blue;
+  width: 200px;
+  height: 200px;
+  display: inline-block;
+}
+
+.right {
+  background-color: green;
+  width: 200px;
+  height: 200px;
+  display: inline-block;
+}
+
+.bottom {
+  background-color: purple;
+  width: 400px;
+  height: 200px;
+}
