@@ -3,12 +3,19 @@
   height: 600px;
   border: 1px solid black;
   font-size: 0px;
+  color: white;
+  font-weight: bold;
+}
+
+p {
+  margin: 0px;
 }
 
 .top {
   background-color: red;
   width: 400px;
   height: 200px;
+  font-size: 16px;
 }
 
 .left {
@@ -16,6 +23,9 @@
   width: 200px;
   height: 200px;
   display: inline-block;
+  font-size: 16px;
+  vertical-align: top;
+  float: left;
 }
 
 .right {
@@ -23,10 +33,14 @@
   width: 200px;
   height: 200px;
   display: inline-block;
+  font-size: 16px;
+  float: left;
 }
 
 .bottom {
+  clear: both;
   background-color: purple;
   width: 400px;
   height: 200px;
+  font-size: 16px;
 }
