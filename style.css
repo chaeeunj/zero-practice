@@ -15,32 +15,26 @@ p {
   background-color: red;
   width: 400px;
   height: 200px;
-  font-size: 16px;
 }
 
 .left {
   background-color: blue;
   width: 200px;
   height: 200px;
-  display: inline-block;
-  font-size: 16px;
-  vertical-align: top;
-  float: left; /*왼쪽으로 정렬*/
 }
 
 .right {
   background-color: green;
   width: 200px;
   height: 200px;
-  display: inline-block;
-  font-size: 16px;
-  float: left; /*왼쪽으로 정렬*/
 }
 
 .bottom {
-  clear: both;
   background-color: purple;
   width: 400px;
   height: 200px;
-  font-size: 16px;
+}
+
+.flexBox {
+  display: flex;
 }
