@@ -1,40 +1,40 @@
 .container {
   width: 400px;
   height: 600px;
-  border: 1px solid black;
-  font-size: 0px;
   color: white;
   font-weight: bold;
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* 열(세로) 격자를 그려줌 -> 현재 가로너비가 400이므로 1fr은 200에 해당 */
+  grid-template-rows: 1fr 1fr 1fr; /* 행(가로) 격자를 그려줌 -> 현재 높이가 600이므로 1fr은 200에 해당 */
+  grid-template-areas: /* 영역마다 이름을 부여 */
+    'top top'
+    'left right'
+    'bottom bottom';
 }
 
 p {
   margin: 0px;
 }
 
+/* grid를 사용할 때는 부모인 container에서 영역별 너비와 높이를 지정해줬기 때문에
+   자식들(top, left, right, bottom)이 따로 width와 height를 지정할 필요가 없음 */
+
 .top {
   background-color: red;
-  width: 400px;
-  height: 200px;
+  grid-area: top; /* 위에서 지정한 영역 top과 class top을 가진 태그를 연결함 */
 }
 
 .left {
   background-color: blue;
-  width: 200px;
-  height: 200px;
+  grid-area: left;
 }
 
 .right {
   background-color: green;
-  width: 200px;
-  height: 200px;
+  grid-area: right;
 }
 
 .bottom {
   background-color: purple;
-  width: 400px;
-  height: 200px;
-}
-
-.flexBox {
-  display: flex;
+  grid-area: bottom;
 }
