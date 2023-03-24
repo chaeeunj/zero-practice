@@ -1,12 +1,12 @@
-@font-face {
-  font-family: thalib; /* 불러올 폰트의 이름을 정해줌 */
-  src: url(./font/Thalib\ Textured.ttf);
+.container {
+  width: 200px;
+  height: 100px;
+  border: 1px solid red;
 }
 
-.font {
-  font-style: italic;
-  font-weight: bold;
-  font-size: 20px;
-  line-height: 30px;
-  font-family: thalib;
+p {
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid blue;
+  display: inline-block;
 }
