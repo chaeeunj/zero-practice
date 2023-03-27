@@ -90,6 +90,21 @@ p {
   justify-content: space-around;
 }
 
+.top-left span {
+  cursor: pointer;
+}
+
+.top-left span:nth-of-type(1):hover {
+  color: red;
+  /* top-left 클래스의 span 태그 중 1번째 태그에 
+  마우스가 올려졌을 때 빨간 색으로 변경 */
+}
+
+#fill-heart {
+  display: none;
+  fill: red;
+}
+
 .top-center {
   grid-area: top-center;
   display: flex;
