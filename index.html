@@ -7,30 +7,22 @@
     <title>Document</title>
   </head>
   <body>
-    <!--
-      html의 form 태그에서 사용할 수 있는 get과 post방식
-
-      id : 123, password : 123 을 입력했을 때 둘의 차이
-
-      get : 사용자가 입력한 정보를 url에 표현해주며 ? 를 분기로 정보를 전달해줌, 
-      form 태그 하나에 다수의 input 태그를 사용해 정보를 전달할 때는 & 를 통해 정보를 배치 후 전달,
-      input 태그가 가지는 name = 사용자가 입력한 값 의 형태로 정보를 전달해줌
-      예시) http://127.0.0.1:5500/result.html?id=123&password=123
-
-      post : url에 정보가 나타나지 않음
-      예시) http://127.0.0.1:5500/result.html
-    -->
-
     <form action="./result.html" method="get">
-      <div>ID : <input name="id" type="text" /></div>
-      <div>PW : <input name="password" type="password" /></div>
+      <input type="email" name="" placeholder="email을 입력해주세요" />
+      <br />
+      <input type="password" name="" placeholder="pw를 입력해주세요" />
+      <br />
       <input type="submit" value="로그인" />
-    </form>
+      <!-- 누르면 폼이 제출됨, 폼과 관련된 버튼 -->
+      <input type="button" value="로그인" />
+      <!-- 누르면 폼이 제출되지 않음, 폼과 관련없는 버튼을 만들 때 사용 -->
+      <button type="submit">로그인</button>
+      <!-- 버튼 태그는 타입과 관계없이 누르면 폼이 제출됨 -->
+      <button>로그인</button>
+      <!-- 버튼 태그는 타입과 관계없이 누르면 폼이 제출됨 -->
 
-    <!-- <form action="./result.html" method="post">
-      <div>ID : <input name="id" type="text" /></div>
-      <div>PW : <input name="password" type="password" /></div>
-      <input type="submit" value="로그인" />
-    </form> -->
+      <!-- 즉, 폼이 제출되지 않는 버튼을 만들고 싶다면 -->
+      <button type="button">로그인</button>
+    </form>
   </body>
 </html>
