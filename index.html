@@ -8,11 +8,22 @@
   </head>
   <body>
     <form action="./result.html" method="get">
-      <select name="color" multiple>
+      <select name="color">
         <option value="red">빨간색</option>
         <option value="blue">파란색</option>
         <option value="green">초록색</option>
       </select>
+      <div>
+        모자 : <input type="checkbox" name="kind" value="hat" />
+        상의 :
+        <input type="checkbox" name="kind" value="top" /> 하의 :
+        <input type="checkbox" name="kind" value="bottom" /> 양말 :
+        <input type="checkbox" name="kind" value="socks" />
+      </div>
+      <div>
+        남자 : <input type="radio" name="gender" value="man" /> 여자 :
+        <input type="radio" name="gender" value="woman" />
+      </div>
       <input type="submit" value="제출" />
     </form>
   </body>
