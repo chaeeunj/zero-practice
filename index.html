@@ -8,19 +8,23 @@
   </head>
   <body>
     <form action="./result.html" method="get">
-      <h1>게시글 작성</h1>
-      <div>
-        <label
-          >제목 : <br />
-          <input type="text" name="" id="" />
-        </label>
-      </div>
-      <div>
-        <label
-          >내용 : <br />
-          <textarea cols="30" rows="5"></textarea>
-        </label>
-      </div>
+      <input type="text" name="text" />
+      <input type="hidden" name="where" value="top_search" />
+      <!-- hidden 타입은 화면에 나타나지 않고 url에만 나타남
+           서버에 전송할 내용을 담을 수 있음-->
+      <!-- http://127.0.0.1:5500/result.html?text=123&where=top_search -->
+      <input type="submit" value="제출" />
+    </form>
+    <p>
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Suscipit illo
+      perferendis nulla aliquid! Aliquid, voluptates! Saepe enim culpa ullam
+      voluptatem nostrum placeat quasi explicabo rerum vero hic ex, porro
+      veritatis!
+    </p>
+    <form action="./result.html" method="get">
+      <input type="text" name="text" />
+      <input type="hidden" name="where" value="bottom_search" />
+      <!-- http://127.0.0.1:5500/result.html?text=123&where=bottom_search -->
       <input type="submit" value="제출" />
     </form>
   </body>
