@@ -1,16 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <!-- 
-      head 태그 안에 들어가는 내용들 
-
-      1. css 파일들 <link>
-      2. style 태그
-      3. title 태그
-      4. meta 태그들
-      5. favicon을 위한 태그 : 보통 확장자는 ico
-    -->
     <link rel="icon" type="image/x-icon" href="./bear.ico" />
   </head>
-  <body></body>
+
+  <body>
+    <!--
+    css 선택자에서
+    * -> 모든것을 선택할 수 있음
+    : -> 가상 클래스
+    :: -> 가상 요소
+    [] -> 속성 선택자
+   -->
+    <!--
+    .test .panda {} 와 .test>.panda {} 의 차이점
+    -> 공백은 test 클래스 안에 있는 panda 클래스 전부를 선택하고
+       > 는 test 클래스의 직계자손인 panda 클래스만 선택함
+    
+ex) <div class="test">
+      <p class="panda"></P>
+        <div>
+          <p class="panda">
+        </div>
+      <p class="panda"></p>
+    </div>
+    
+    이렇게 작성된 코드에서 css 선택자를 .test>.panda {} 로 작성하면
+    처음과 마지막에 있는 <p class="panda"></p> 안의 내용만 해당하고
+    직계가 아닌 가운데의 내용은 class 가 panda 로 동일해도 선택되지 않음
+   -->
+  </body>
 </html>
