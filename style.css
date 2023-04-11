@@ -1,16 +1,19 @@
-/* Attribute Selector(속성 선택자 */
-
-/* 1. [attr] */
-a[target] {
-  color: hotpink;
+body {
+  background-color: lightblue;
+}
+.name {
+  margin-top: 20px;
+  width: 80px;
+  height: 30px;
 }
 
-/* 2. [attr=value] */
-a[href="http://example.org"]
-{
-  color: indigo;
+.birth {
+  width: 150px;
+  height: 30px;
 }
 
-input[type='submit'] {
-  color: red;
+.view {
+  background-color: bisque;
+  border: 1px solid bisque;
+  height: 30px;
 }
