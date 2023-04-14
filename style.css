@@ -1,19 +1,67 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
 body {
-  background-color: lightblue;
-}
-.name {
-  margin-top: 20px;
-  width: 80px;
-  height: 30px;
+  margin: 0;
+  padding: 0;
 }
 
-.birth {
-  width: 150px;
-  height: 30px;
+body {
+  background-color: aliceblue;
 }
 
-.view {
-  background-color: bisque;
-  border: 1px solid bisque;
-  height: 30px;
+.container {
+  max-width: 768px;
+  min-height: 100vh;
+  margin: 0 auto; /* 위아래 / 좌우 */
+  display: flex;
+}
+
+nav {
+  background-color: tomato;
+  color: white;
+  flex-basis: 120px;
+}
+
+.box-container {
+  background-color: aquamarine;
+  flex-grow: 1; /* 네비 바를 제외한 영역을 꽉 채움 */
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.box {
+  background-color: wheat;
+  border: 3px solid purple;
+  border-radius: 5px;
+  width: 50%; /* flex-basis: 50% 와 동일함 */
+  min-height: 150px;
+  flex-grow: 1;
+  flex-basis: 50%;
+}
+
+footer {
+  background-color: lightgreen;
+  border: 3px solid green;
+  min-height: 50px;
+  width: 100%;
+  flex-grow: 1;
+}
+
+.box:nth-child(2n) {
+  border-color: blue;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .box-container {
+    flex-direction: column;
+  }
 }
