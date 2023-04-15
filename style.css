@@ -1,17 +1,12 @@
 /* Pseudo-Class Selector(가상 클래스 선택자) */
 
-/* 1. first child */
+/* first child VS first-of-type */
 
-.movie:first-child {
-  font-size: 26px;
-}
+/* 1. :first-of-type */
+/* p:first-of-type {
+  color: red;
+} */
 
-/* 2. last-child */
-span:last-child {
-  color: tomato;
-}
+/* 2. :last-of-type */
 
-/* 3. nth-child() */
-li:nth-child(2n) {
-  color: hotpink;
-}
+/* 3. :nth-of-type() */
