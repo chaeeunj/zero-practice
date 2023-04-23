@@ -3,7 +3,7 @@
   width: 80%;
   max-width: 1920px;
   margin: 0 auto;
-  border: 1px solid white;
+  border: 1px solid black;
 }
 
 header {
@@ -17,7 +17,7 @@ header {
 header .gnb {
   display: grid;
   width: 100%;
-  grid-template-columns: 200px 1fr 200px;
+  grid-template-columns: 300px 1fr 300px;
   grid-template-rows: auto auto;
   grid-template-areas:
     'logo gnb-menu menu'
@@ -89,9 +89,72 @@ header .gnb .menu {
   grid-area: menu;
   display: flex;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: space-evenly;
+  font-weight: bold;
+  width: 80%;
+  margin-left: 20px;
+}
+
+header .gnb .menu .menu-hover {
+  padding: 10px 10px;
+  border-radius: 30px;
+}
+
+header .gnb .menu .menu-hover:hover {
+  background-color: rgba(172, 172, 172, 0.5);
+}
+
+header .gnb .mlnu .profile {
+  background-color: white;
+  color: gray;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-weight: bold;
 }
 
 header .gnb .search {
   grid-area: search;
+  width: 70%;
+  margin: 0 auto;
+}
+
+header .gnb .search .searchUl {
+  background-color: white;
+  color: black;
+  display: flex;
+  border-radius: 50px;
+}
+
+header .gnb .search .searchUl li {
+  width: 25%;
+  text-align: left;
+  padding: 20px 50px 20px 20px;
+  font-weight: bold;
+  border-radius: 50px;
+  position: relative;
+}
+
+header .gnb .search .searchUl li::after {
+  position: absolute;
+  content: '';
+  width: 1px;
+  height: calc(100% - 40px);
+  background-color: lightgray;
+  right: 0;
+  top: 50%;
+  transform: translate(0, -50%);
+}
+
+header .gnb .search .searchUl li:last-of-type::after {
+  display: none;
+}
+
+header .gnb .search .searchUl li:hover {
+  background-color: lightgray;
+}
+
+header .gnb .search .searchUl li span {
+  color: gray;
+  font-size: 12px;
+  font-weight: normal;
 }
