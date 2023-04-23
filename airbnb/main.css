@@ -3,8 +3,9 @@
   width: 80%;
   max-width: 1920px;
   margin: 0 auto;
-  border: 1px solid black;
 }
+
+/* header */
 
 header {
   background-color: black;
@@ -157,4 +158,77 @@ header .gnb .search .searchUl li span {
   color: gray;
   font-size: 12px;
   font-weight: normal;
+}
+
+/* notice */
+
+.notice {
+  background-color: #ff385c;
+  border-radius: 14px;
+  text-align: center;
+  height: 320px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.notice p {
+  font-size: 1.5rem;
+  color: white;
+  font-weight: bold;
+  line-height: 1.8rem;
+  margin-bottom: 2rem;
+}
+
+.notice button {
+  border: 1px solid white;
+  padding: 5px 15px;
+  color: white;
+  background-color: inherit;
+  font-weight: bold;
+  border-radius: 10px;
+}
+
+/* mainBanner */
+
+.mainBanner {
+  height: 600px;
+  border-radius: 14px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  background-image: url('https://a0.muscache.com/im/pictures/4b75813b-bc09-4719-b6b8-06a5f170724d.jpg?im_w=960');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.mainBanner .content {
+  color: white;
+  text-align: center;
+  margin-bottom: 50px;
+}
+.mainBanner .content p {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+}
+
+.mainBanner .content button {
+  border: 1px solid white;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  background-color: white;
+  font-weight: bold;
+  border-radius: 24px;
+}
+
+.mainBanner .content button span {
+  background: linear-gradient(90deg, #6f019c 0%, #c6017e 135.12%);
+  -webkit-background-clip: -webkit-text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
