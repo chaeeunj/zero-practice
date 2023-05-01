@@ -6,6 +6,12 @@
   overflow: hidden;
 }
 
+@media screen and (max-width: 767px) {
+  .wrap {
+    width: 90%;
+  }
+}
+
 .black-bg {
   background-color: black;
   width: 100%;
@@ -251,10 +257,12 @@ header .gnb .search .searchUl li span {
 .city {
   display: flex;
   width: 100%;
+  overflow: auto;
 }
 
 .city .card {
   width: 25%;
+  min-width: 250px;
   margin-right: 30px;
   cursor: pointer;
 }
@@ -285,6 +293,27 @@ header .gnb .search .searchUl li span {
 
 .city .card figcaption span {
   font-size: 1rem;
+}
+
+@media screen and (max-width: 767px) {
+  .city {
+    scrollbar-width: none; /* firefox */
+  }
+
+  .city::-webkit-scrollbar {
+    /* chrome */
+    display: none;
+  }
+
+  .city .card {
+    margin-right: 15px;
+  }
+
+  .city .card figcaption p {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    padding-bottom: 0.5rem;
+  }
 }
 
 /* expression */
