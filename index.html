@@ -9,26 +9,21 @@
     <h1>제목입니다.</h1>
     <p>내용입니다.</p>
     <button>수정하기</button><br />
-    <button onclick="openModal()">삭제하기</button>
+    <button onclick="openCloseModal('block')">삭제하기</button>
 
     <div class="modalDiv">
-      <div class="bg" onclick="closeModal()"></div>
+      <div class="bg" onclick="openCloseModal('none')"></div>
       <div class="modal">
         <p>정말 삭제하시겠습니까?</p>
         <button>삭제</button>
-        <button onclick="closeModal()">취소</button>
+        <button onclick="openCloseModal('none')">취소</button>
       </div>
     </div>
 
     <script>
-      function openModal() {
+      function openCloseModal(argument) {
         var modal = document.querySelector('.modalDiv');
-        modal.style.display = 'block';
-      }
-
-      function closeModal() {
-        var modal = document.querySelector('.modalDiv');
-        modal.style.display = 'none';
+        modal.style.display = argument;
       }
     </script>
   </body>
