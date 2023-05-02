@@ -1,28 +1,27 @@
-body {
-  margin: 0px;
+@keyframes wiggle {
+  0% {
+    transform: rotate(0deg);
+    color: red;
+  }
+  25% {
+    transform: rotate(10deg);
+    color: blue;
+  }
+  50% {
+    transform: rotate(0deg);
+    color: yellow;
+  }
+  75% {
+    transform: rotate(-10deg);
+    color: orange;
+  }
+  100% {
+    transform: rotate(0deg);
+    color: green;
+  }
 }
 
-.modalDiv {
-  display: none;
-}
-
-.bg {
-  width: 100vw;
-  height: 100vh;
-  background-color: black;
-  position: fixed;
-  top: 0;
-  left: 0;
-  opacity: 50%;
-}
-
-.modal {
-  position: absolute;
-  z-index: 10;
-  background-color: white;
-  width: 50%;
-  left: 25%;
-  top: 25%;
-  padding: 20px;
-  border-radius: 14px;
+.wiggle {
+  display: inline-block;
+  animation: wiggle 2.5s infinite;
 }
