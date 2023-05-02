@@ -1,12 +1,43 @@
-/* Pseudo-Class Selector(가상 클래스 선택자) */
+body {
+  margin: 20px;
+}
 
-/* first child VS first-of-type */
+#box {
+  width: 100px;
+  height: 100px;
+  background-image: url(./instagram/img/profile.jpg);
+  position: center;
+  background-size: cover;
+  border: 1px solid lightgray;
+  border-radius: 14px;
+  position: relative;
+  overflow: hidden; /* box 클래스가 가진 영역보다 넘쳐 흐른것은 숨김 */
 
-/* 1. :first-of-type */
-/* p:first-of-type {
-  color: red;
+  transition: width 1s ease-in;
+}
+
+/* .box-overloay {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 14px;
+  background-color: blue;
+  top: 100px;
+  left: 0;
+  transition: top 1s ease-in-out;
+}
+
+.box-overloay p {
+  margin: 0px;
+  font-size: 10px;
+  color: white;
+  font-weight: bold;
+}
+
+#box:hover .box-overloay {
+  top: 0px;
 } */
-
-/* 2. :last-of-type */
-
-/* 3. :nth-of-type() */

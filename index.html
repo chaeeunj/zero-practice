@@ -3,26 +3,26 @@
   <head>
     <link rel="icon" type="image/x-icon" href="./bear.ico" />
     <link rel="stylesheet" href="style.css" />
-    <title>css</title>
+    <title>sass</title>
   </head>
   <body>
-    <!DOCTYPE html>
-    <html lang="en">
-      <head>
-        <link rel="icon" type="image/x-icon" href="./bear.ico" />
-        <link rel="stylesheet" href="style.css" />
-        <title>css</title>
-      </head>
-      <body>
-        <h2>Movie List</h2>
-        <section>
-          <div class="movie">Toy Story</div>
-          <p class="movie">Zootopia</p>
-          <p class="movie">Inside Out</p>
-          <p class="movie">Finding Nemo</p>
-          <div class="movie">Coco</div>
-        </section>
-      </body>
-    </html>
+    <div id="box">
+      <!-- <div class="box-overloay">
+        <p>판다코딩</p>
+        <p>010-xxxx-xxxx</p>
+      </div> -->
+    </div>
+
+    <script>
+      var box = document.getElementById('box');
+
+      box.addEventListener('mouseover', function () {
+        box.style.width = '200px';
+      });
+
+      box.addEventListener('mouseout', function () {
+        box.style.width = '100px';
+      });
+    </script>
   </body>
 </html>
