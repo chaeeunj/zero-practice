@@ -6,6 +6,19 @@
     <title>sass</title>
   </head>
   <body>
-    <h1 class="wiggle">안녕하세요</h1>
+    <h1>x : <span id="x"></span>, y : <span id="y"></span></h1>
+
+    <script>
+      window.addEventListener('mousemove', mouseFollow);
+
+      var x = document.querySelector('#x');
+      var y = document.querySelector('#y');
+
+      function mouseFollow(event) {
+        x.innerHTML = event.clientX;
+        y.innerHTML = event.clientY;
+        console.log(event);
+      }
+    </script>
   </body>
 </html>
