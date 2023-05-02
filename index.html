@@ -6,23 +6,30 @@
     <title>sass</title>
   </head>
   <body>
-    <div id="box">
-      <!-- <div class="box-overloay">
-        <p>판다코딩</p>
-        <p>010-xxxx-xxxx</p>
-      </div> -->
+    <h1>제목입니다.</h1>
+    <p>내용입니다.</p>
+    <button>수정하기</button><br />
+    <button onclick="openModal()">삭제하기</button>
+
+    <div class="modalDiv">
+      <div class="bg" onclick="closeModal()"></div>
+      <div class="modal">
+        <p>정말 삭제하시겠습니까?</p>
+        <button>삭제</button>
+        <button onclick="closeModal()">취소</button>
+      </div>
     </div>
 
     <script>
-      var box = document.getElementById('box');
+      function openModal() {
+        var modal = document.querySelector('.modalDiv');
+        modal.style.display = 'block';
+      }
 
-      box.addEventListener('mouseover', function () {
-        box.style.width = '200px';
-      });
-
-      box.addEventListener('mouseout', function () {
-        box.style.width = '100px';
-      });
+      function closeModal() {
+        var modal = document.querySelector('.modalDiv');
+        modal.style.display = 'none';
+      }
     </script>
   </body>
 </html>
