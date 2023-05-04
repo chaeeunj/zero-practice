@@ -19,8 +19,9 @@
       function mouseFollow(event) {
         x.innerHTML = event.clientX;
         y.innerHTML = event.clientY;
-        cursor.style.top = event.clientY - 25 + 'px';
-        cursor.style.left = event.clientX - 25 + 'px';
+
+        let value = event.clientX - 25 + 'px,' + (event.clientY - 25) + 'px';
+        cursor.style.transform = 'translate(' + value + ')';
       }
     </script>
   </body>
