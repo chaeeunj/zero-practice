@@ -6,18 +6,29 @@
     <title>sass</title>
   </head>
   <body>
-    <div id="targetBox">
-      <div id="blind"></div>
-      <h1>안녕하세요! 판다코딩입니다.</h1>
+    <div class="scroll-outer">
+      <div class="scroll-inner"></div>
     </div>
-
     <script>
-      var targetBox = document.querySelector('#targetBox');
-      var blind = document.querySelector('#blind');
+      /*
+      문서의 전체 높이 : document.documentElement.scrollHeight
+      브라우저가 보여주고 있는 높이 : window.innerHeight
+      스크롤의 위치 : document.documentElement.scrollTop
 
-      targetBox.addEventListener('mousemove', function (e) {
-        blind.style.transform = 'translateX(' + e.clientX + 'px)';
-        console.log('translateX(' + e.clientX + 'px)');
+      문서의 전체 높이 - 브라우저가 보여주고 있는 높이 = 스크롤을 맨 끝으로 내렸을 때의 위치
+      스크롤의 위치 / (문서의 전체 높이 - 브라우저가 보여주고 있는 높이) * 100%
+      = 현재 브라우저의 전체 높이에서 스크롤을 얼마나 내렸는지
+      */
+      var scrollY = 0;
+      var target = document.querySelector('.scroll-inner');
+
+      window.addEventListener('scroll', function (e) {
+        var documentHeight = document.documentElement.scrollHeight;
+        var browserHeight = window.innerHeight;
+        scrollY = document.documentElement.scrollTop;
+        var percent = (scrollY / (documentHeight - browserHeight)) * 100 + '%';
+        target.style.height = percent;
+        console.log(percent);
       });
     </script>
   </body>
