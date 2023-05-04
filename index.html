@@ -26,9 +26,9 @@
         var documentHeight = document.documentElement.scrollHeight;
         var browserHeight = window.innerHeight;
         scrollY = document.documentElement.scrollTop;
-        var percent = (scrollY / (documentHeight - browserHeight)) * 100 + '%';
-        target.style.height = percent;
-        console.log(percent);
+        var percent = (scrollY / (documentHeight - browserHeight)) * 100;
+        target.style.width = Math.round(percent) + '%';
+        console.log(percent, Math.round(percent));
       });
     </script>
   </body>
