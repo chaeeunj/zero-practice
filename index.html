@@ -7,17 +7,20 @@
   </head>
   <body>
     <h1>x : <span id="x"></span>, y : <span id="y"></span></h1>
+    <div id="cursor"></div>
 
     <script>
       window.addEventListener('mousemove', mouseFollow);
 
       var x = document.querySelector('#x');
       var y = document.querySelector('#y');
+      var cursor = document.querySelector('#cursor');
 
       function mouseFollow(event) {
         x.innerHTML = event.clientX;
         y.innerHTML = event.clientY;
-        console.log(event);
+        cursor.style.top = event.clientY - 25 + 'px';
+        cursor.style.left = event.clientX - 25 + 'px';
       }
     </script>
   </body>
