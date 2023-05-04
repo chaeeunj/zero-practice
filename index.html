@@ -6,23 +6,19 @@
     <title>sass</title>
   </head>
   <body>
-    <h1>x : <span id="x"></span>, y : <span id="y"></span></h1>
-    <div id="cursor"></div>
+    <div id="targetBox">
+      <div id="blind"></div>
+      <h1>안녕하세요! 판다코딩입니다.</h1>
+    </div>
 
     <script>
-      window.addEventListener('mousemove', mouseFollow);
+      var targetBox = document.querySelector('#targetBox');
+      var blind = document.querySelector('#blind');
 
-      var x = document.querySelector('#x');
-      var y = document.querySelector('#y');
-      var cursor = document.querySelector('#cursor');
-
-      function mouseFollow(event) {
-        x.innerHTML = event.clientX;
-        y.innerHTML = event.clientY;
-
-        let value = event.clientX - 25 + 'px,' + (event.clientY - 25) + 'px';
-        cursor.style.transform = 'translate(' + value + ')';
-      }
+      targetBox.addEventListener('mousemove', function (e) {
+        blind.style.transform = 'translateX(' + e.clientX + 'px)';
+        console.log('translateX(' + e.clientX + 'px)');
+      });
     </script>
   </body>
 </html>
