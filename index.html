@@ -2,34 +2,18 @@
 <html lang="en">
   <head>
     <link rel="icon" type="image/x-icon" href="./bear.ico" />
-    <link rel="stylesheet" href="style.css" />
-    <title>sass</title>
+    <!-- <link rel="stylesheet" href="style.css" /> -->
+
+    <title>JS</title>
   </head>
   <body>
-    <div class="scroll-outer">
-      <div class="scroll-inner"></div>
-    </div>
-    <script>
-      /*
-      문서의 전체 높이 : document.documentElement.scrollHeight
-      브라우저가 보여주고 있는 높이 : window.innerHeight
-      스크롤의 위치 : document.documentElement.scrollTop
+    <h1 id="title">DOM 문서구조</h1>
 
-      문서의 전체 높이 - 브라우저가 보여주고 있는 높이 = 스크롤을 맨 끝으로 내렸을 때의 위치
-      스크롤의 위치 / (문서의 전체 높이 - 브라우저가 보여주고 있는 높이) * 100%
-      = 현재 브라우저의 전체 높이에서 스크롤을 얼마나 내렸는지
-      */
-      var scrollY = 0;
-      var target = document.querySelector('.scroll-inner');
-
-      window.addEventListener('scroll', function (e) {
-        var documentHeight = document.documentElement.scrollHeight;
-        var browserHeight = window.innerHeight;
-        scrollY = document.documentElement.scrollTop;
-        var percent = (scrollY / (documentHeight - browserHeight)) * 100;
-        target.style.width = Math.round(percent) + '%';
-        console.log(percent, Math.round(percent));
-      });
-    </script>
+    <ul>
+      <li>구글</li>
+      <li class="link-class" name="link-name">네이버</li>
+      <li class="link-class" name="link-name">카카오</li>
+    </ul>
+    <script src="./app.js"></script>
   </body>
 </html>
