@@ -7,36 +7,19 @@
     <title>JS</title>
   </head>
   <body>
-    <script>
-      // 경로 이동
-      // location.href = 'https://www.naver.com/';
+    <div id="button-wrapper">
+      <div id="button-subWrapper">
+        <button id="count-up-button">1</button>
+      </div>
+    </div>
+    <span>0</span>
 
-      // 앞으로 가기
-      // history.forward();
-      // 뒤로 가기
-      // history.back();
+    <input type="text" />
+    <input type="text" />
+    <div id="result"></div>
 
-      // alert : 경고 메시지 출력 함수
-      // alert('hi');
-
-      // confirm : 확인 메시지 출력 함수
-
-      // prompt : 입력 메시지 출력 함수
-      // const name = prompt('이름을 입력하세요');
-
-      // setTimeout : n초 후에 함수를 실행하는 타이머 함수
-      // let timerId = setTimeout(() => {
-      //   console.log('3 seconds end');
-      // }, 3000); // 3초 후에 실행되는 함수
-
-      // clearTimeout(timerId); // 3초가 지나지 않았지만 특정 경우에 취소하고 싶다면 사용하는 함수
-
-      // setInterval : n초 마다 함수를 실행하는 타이머 함수
-      let timerId = setInterval(() => {
-        console.log('every 3 seconds');
-      }, 3000); // 3초 후에 실행되는 함수
-
-      clearInterval(timerId);
-    </script>
+    <span id="test">test</span>
   </body>
+  <script src="./app.js"></script>
+  <script src="./app2.js"></script>
 </html>
