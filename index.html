@@ -7,13 +7,65 @@
     <title>JS</title>
   </head>
   <body>
-    <h1 id="title">DOM 문서구조</h1>
+    <!-- 특정 요소 찾기 -->
+    <div id="target">타겟</div>
+    <div id="target2" class="target-class">타겟2</div>
+    <div class="target-class">타겟3</div>
+    <a href="/">링크</a>
 
-    <ul>
-      <li>구글</li>
-      <li class="link-class" name="link-name">네이버</li>
-      <li class="link-class" name="link-name">카카오</li>
+    <!-- 인접 노드 찾기 -->
+    <a href="/">로고</a>
+    <ul id="navigation-menu">
+      <li>상점</li>
+      <li>커뮤니티</li>
+      <li>마이페이지</li>
     </ul>
-    <script src="./app.js"></script>
+    <button>로그인</button>
+    <button>회원가입</button>
+
+    <!-- DOM 변경하기 -->
+    <div id="test">테스트용</div>
+    <input type="text" id="test-input" />
+
+    <script>
+      // ul태그의 자식인 li태그들을 가져올 때
+      const navigationMenu = document.getElementById('navigation-menu');
+      console.log(navigationMenu.children);
+
+      // li태그들을 하나씩 가져올 때
+      for (menu of navigationMenu.children) {
+        console.log(menu.innerHTML);
+      }
+
+      // 첫 번째 자식 가져오기
+      console.log(navigationMenu.firstElementChild);
+
+      // 마지막 자식 가져오기
+      console.log(navigationMenu.lastElementChild);
+
+      // 같은 레벨에 있는(=부모가 같은) 요소 중 자신의 바로 이전에 있는 것을 가져올 때
+      console.log(navigationMenu.previousElementSibling);
+
+      // 자신의 부모를 가져오기
+      console.log(navigationMenu.parentElement);
+
+      // 바디에 dom(요소) 추가하기
+      const dom = document.createElement('div');
+      document.body.appendChild(dom);
+
+      // 위에서 만든 dom에 dom2 요소를 추가하기
+      const dom2 = document.createElement('div');
+      dom2.innerHTML = '마지막';
+      document.body.insertBefore(dom2, dom); // dom2를 dom이전에 추가하는 함수
+
+      // dom의 내용 변경하기
+      const testDiv = document.getElementById('test');
+      testDiv.innerHTML = '테스트용 수정';
+      testDiv.style.color = 'red';
+      testDiv.hidden = 'true'; // 내용 숨기기
+
+      const testInput = document.getElementById('test-input');
+      testInput.value = '자동으로 입력'; // input창 안의 내용 변경
+    </script>
   </body>
 </html>
