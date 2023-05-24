@@ -1,16 +1,46 @@
-const button = document.getElementById('count-up-button');
-const buttonWrapper = document.getElementById('button-wrapper');
-const buttonSubWrapper = document.getElementById('button-subWrapper');
+//  promise 사용
+// const A2 = () =>
+//   new Promise((resolve, reject) => {
+//     const a = 'A 함수 실행 후 생기는 데이터';
+//     resolve(a);
+//   });
 
-button.onclick = (event) => {
-  event.stopPropagation(); // button에 이벤트가 일어나도 그것이 부모에게 전달되지 않게 만듦
-  console.log('button event trigged');
+// const B2 = (a) => {
+//   console.log(`${a}를 이용하는 B`);
+// };
+
+// A2()
+//   .then((a) => {
+//     console.log('A2 실행 성공');
+//     B2(a);
+//   })
+//   .catch((error) => {
+//     console.log(error.message);
+//   });
+
+// async, await 사용
+const A3 = async () => {
+  const a = 'A 함수 실행 후 생기는 데이터';
+  return a;
 };
 
-buttonWrapper.onclick = () => {
-  console.log('wrapper event trigged');
+const B3 = (a) => {
+  console.log(`${a}를 이용하는 B`);
 };
 
-buttonSubWrapper.onclick = () => {
-  console.log('subWrapper event trigged');
+A3()
+  .then((a) => {
+    console.log('A2 실행 성공');
+    B3(a);
+    console.log('-----------------');
+  })
+  .catch((error) => {
+    console.log(error.message);
+  });
+
+const func = async () => {
+  const a = await A3();
+  console.log('A3 실행 성공');
+  B3(a);
 };
+func();
