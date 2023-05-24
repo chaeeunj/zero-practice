@@ -1,18 +1,5 @@
-fetch('./sample.json').then(async (result) => {
-  console.log('result', result);
-  if (result.ok) {
-    const data = await result.json();
-    console.log(data);
-  }
-});
+// 쿠키 생성
+document.cookie = 'name=jce; path=/; max-age=3600'; // 한시간 동안 쿠키가 유지됨
 
-fetch('https://ohou.se')
-  .then((res) => {
-    console.log('success', res);
-  })
-  .then((res) => {
-    console.log('success', res);
-  })
-  .catch((err) => {
-    console.log('error', err);
-  });
+// 쿠키 삭제
+document.cookie = 'name=jce; path=/; max-age=3600'; // max-age를 0으로 바꿔줌
